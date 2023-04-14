@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("changedposts", {
+    await queryInterface.createTable('changedposts', {
       id: {
         type: Sequelize.INTEGER.UNSIGNED,
         autoIncrement: true,
@@ -41,6 +41,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("changedposts");
+    await queryInterface.dropTable('changedposts');
   },
 };

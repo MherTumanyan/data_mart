@@ -1,11 +1,11 @@
-import { Kafka } from "kafkajs";
-import { saveToPosts } from "../db";
+import { Kafka } from 'kafkajs';
+import { saveToPosts } from '../db';
 
 const kafka = new Kafka({
-  brokers: ["localhost:9092"],
+  brokers: ['localhost:9092'],
 });
-const groupId = process.env.GROUP_ID || "group-4";
-const serviceTopic = process.env.SERVICE_TOPIC || "data_mart";
+const groupId = process.env.GROUP_ID || 'group-4';
+const serviceTopic = process.env.SERVICE_TOPIC || 'data_mart';
 
 const consumer = kafka.consumer({ groupId });
 

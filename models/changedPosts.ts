@@ -1,5 +1,5 @@
-import { Model, DataTypes } from "sequelize";
-import { sequelize } from "./sequelize";
+import { Model, DataTypes } from 'sequelize';
+import { sequelize } from './sequelize';
 
 interface ChangedPostsAttributes {
   id: number;
@@ -55,12 +55,12 @@ ChangedPost.init(
     },
   },
   {
-    tableName: "changedposts",
+    tableName: 'changedposts',
     sequelize,
     timestamps: true,
     underscored: true,
     paranoid: true,
-  }
+  },
 );
 
 export { ChangedPost };
